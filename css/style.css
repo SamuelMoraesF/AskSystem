@@ -1,16 +1,16 @@
 @font-face {
-  font-family: "Open Sans Regular";
-  src: url("fonts/OpenSans-Regular-webfont.eot");
-  src: url("fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"),
+    font-family: "Open Sans Regular";
+    src: url("fonts/OpenSans-Regular-webfont.eot");
+    src: url("fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"),
        url("fonts/OpenSans-Regular-webfont.ttf") format("truetype"),
        url("fonts/OpenSans-Regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* Light */
 @font-face {
-  font-family: "Open Sans Light";
+    font-family: "Open Sans Light";
   src: url("fonts/OpenSans-Light-webfont.eot");
   src: url("fonts/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"),
        url("fonts/OpenSans-Light-webfont.ttf") format("truetype"),
@@ -19,99 +19,175 @@
   font-style: normal;
 }
 
-html { border-top: 2px solid #fff; background: #fff; }
-body {
-  font: 16px/1.5 Georgia, Times, "Times New Roman", serif;
-	color: #333;
-	word-wrap: break-word;
-	-webkit-text-size-adjust: 100%;
-	background:#f5f1e8;
+html {
+    border-top: 2px solid #fff;
+    background: #fff;
+    height: 99.8%;
 }
 
-h1, h2, h3, h4, h5, h6 { margin: 0 0 .25em; color: #484848; line-height: 1; font-family: "Open Sans Light", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif; font-weight: normal; text-shadow: 0px 1px 0px rgba(255,255,255,0.75); }
-h1 { font-size: 3em; letter-spacing: -2px; }
-h2 { font-size: 2em; letter-spacing: -1px; }
-h3 { font-size: 1.75em; letter-spacing: -0.5px; }
-h4 { font-size: 1.5em; letter-spacing: -0.25px; }
-h5 { font-size: 1.125em; }
-h6 { font-size: 1em; }
+body {
+    font: 16px/1.5 Georgia, Times, "Times New Roman", serif;
+    color: #333;
+    word-wrap: break-word;
+    -webkit-text-size-adjust: 100%;
+    background: #f5f1e8;
+    min-height:100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 .25em;
+    color: #484848;
+    line-height: 1;
+    font-family: "Open Sans Light", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+    font-weight: normal;
+    text-shadow: 0px 1px 0px rgba(255,255,255,0.75);
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: -2px;
+}
+
+h2 {
+    font-size: 2em;
+    letter-spacing: -1px;
+}
+
+h3 {
+    font-size: 1.75em;
+    letter-spacing: -0.5px;
+}
+
+h4 {
+    font-size: 1.5em;
+    letter-spacing: -0.25px;
+}
+
+h5 {
+    font-size: 1.125em;
+}
+
+h6 {
+    font-size: 1em;
+}
 
 .content {
-	background:url(../img/bg-sand.png) repeat-x #f5f1e8;
-	padding:40px;
+    background: url(../img/bg-sand.png) repeat-x #f5f1e8;
+    padding: 40px;
 }
+
 .lectitle {
-font-size: 4.5em; letter-spacing: -3px; margin: 0 0 .15em -5px; -moz-transition: font-size, letter-spacing .5s linear; -webkit-transition: font-size, letter-spacing .5s linear; -o-transition: font-size, letter-spacing .5s linear; -ms-transition: font-size, letter-spacing .5s linear; transition: font-size, letter-spacing .5s linear;
+    font-size: 4.5em;
+    letter-spacing: -3px;
+    margin: 0 0 .15em -5px;
+    -moz-transition: font-size, letter-spacing .5s linear;
+    -webkit-transition: font-size, letter-spacing .5s linear;
+    -o-transition: font-size, letter-spacing .5s linear;
+    -ms-transition: font-size, letter-spacing .5s linear;
+    transition: font-size, letter-spacing .5s linear;
 }
+
 .bytitle {
-color:##707477;
+    color: ##707477;
 }
 
 input[type=email], input[type=url], input[type=search], input[type=password], input[type=text], textarea {
-  font-size: .857em;
- font: .857em/1.1 "Open Sans Light", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
-  border: 1px solid #dbdbdb;
-  background: transparent;
-	background: rgba(0,0,0,0.05);
-  box-shadow: inset rgba(0,0,0,0.1) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
-  padding: 6px 10px;
-  -moz-transition: all .1s linear;
-  -webkit-transition: all .1s linear;
-  -ms-transition: all .1s linear;
-  -o-transition: all .1s linear;
-  transition: all .1s linear;
-}
-input[type=email]:hover, input[type=url]:hover, input[type=search]:hover, input[type=password]:hover, input[type=text]:hover, textarea:hover {
-  border-color: #bbb;
-  background: rgba(0,0,0,0.03);
-}
-input[type=email]:focus, input[type=url]:focus, input[type=search]:focus, input[type=password]:focus, input[type=text]:focus, textarea:focus {
-  border-color: #bbb;
-	background: #fafafa;
-	outline: 0 none;
-	box-shadow: inset rgba(0,0,0,0.3) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
+    font-size: .857em;
+    font: .857em/1.1 "Open Sans Light", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+    border: 1px solid #dbdbdb;
+    background: transparent;
+    background: rgba(0,0,0,0.05);
+    box-shadow: inset rgba(0,0,0,0.1) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
+    padding: 6px 10px;
+    -moz-transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    -ms-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
 }
 
-input[type=submit], button { 
-  border-radius: .25em; 
-  box-shadow: 0 2px 0 0 rgba(0,0,0,0.1),inset 0 -2px 0 0 rgba(0,0,0,0.2);
-  color: #fff;
-  cursor: pointer;
-  text-align: center;
-  padding: 8px 24px;
-  border: 0;
-  text-shadow: 0 1px 0 rgba(0,0,0,0.25);
-  font: .857em/1.1 "Open Sans Light", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
-  background-color: #276195;
-  background-image: -moz-linear-gradient(#3c88cc,#276195);
-  background-image: -ms-linear-gradient(#3c88cc,#276195);
-  background-image: -webkit-linear-gradient(#3c88cc,#276195);
-  background-image: -o-linear-gradient(#3c88cc,#276195);
-  background-image: linear-gradient(#3c88cc,#276195);
-  -moz-transition: all linear .25s;
-  -webkit-transition: all linear .25s;
-  -o-transition: all linear .25s;
-  transition: all linear .25s;
+input[type=email]:hover, input[type=url]:hover, input[type=search]:hover, input[type=password]:hover, input[type=text]:hover, textarea:hover {
+    border-color: #bbb;
+    background: rgba(0,0,0,0.03);
 }
-input[type=submit]:hover, input[type=submit]:focus, button:hover, button:focus { box-shadow:0 2px 0 0 rgba(0,0,0,0.1),inset 0 -2px 0 0 rgba(0,0,0,0.2),inset 0 12px 24px 2px #3089d8; }
-.ask input[type=text] {
-width:60%;
-font-size:3em;
+
+input[type=email]:focus, input[type=url]:focus, input[type=search]:focus, input[type=password]:focus, input[type=text]:focus, textarea:focus {
+    border-color: #bbb;
+    background: #fafafa;
+    outline: 0 none;
+    box-shadow: inset rgba(0,0,0,0.3) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
 }
-.ask input[type=submit]{
-    font-size:2em;
-    padding:0.5em;
+
+input[type=submit], button {
+    border-radius: .25em;
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.1),inset 0 -2px 0 0 rgba(0,0,0,0.2);
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    padding: 8px 24px;
+    border: 0;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.25);
+    font: .857em/1.1 "Open Sans Light", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+    background-color: #276195;
+    background-image: -moz-linear-gradient(#3c88cc,#276195);
+    background-image: -ms-linear-gradient(#3c88cc,#276195);
+    background-image: -webkit-linear-gradient(#3c88cc,#276195);
+    background-image: -o-linear-gradient(#3c88cc,#276195);
+    background-image: linear-gradient(#3c88cc,#276195);
+    -moz-transition: all linear .25s;
+    -webkit-transition: all linear .25s;
+    -o-transition: all linear .25s;
+    transition: all linear .25s;
 }
-.ask {
-    text-align:center;
-    margin-top:40px;
+
+input[type=submit]:hover, input[type=submit]:focus, button:hover, button:focus {
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.1),inset 0 -2px 0 0 rgba(0,0,0,0.2),inset 0 12px 24px 2px #3089d8;
 }
+
+@media (min-width: 783px) {
+    .ask input[type=text] {
+        width: 60%;
+        font-size: 3em;
+    }
+
+    .ask input[type=submit] {
+        font-size: 2em;
+        padding: 0.5em;
+    }
+
+    .ask {
+        text-align: center;
+        margin-top: 40px;
+    };
+}
+
+@media (max-width: 783px) {
+    .ask input[type=text] {
+        width: 96%;
+        margin-bottom: 10px;
+        font-size: 3em;
+        display: block;
+    }
+
+    .ask input[type=submit] {
+        font-size: 2em;
+        padding: 0.5em;
+        width: 100%;
+    }
+
+    .ask {
+        text-align: center;
+        margin-top: 40px;
+    };
+}
+
 .areanotes {
-    text-align:center;
-    margin-top:20px;
+    text-align: center;
+    margin-top: 20px;
 }
+
 .notes {
-    width:80%;
-    font-size:1em;
-    height:180px;
+    width: 80%;
+    font-size: 1em;
+    height: 180px;
 }
