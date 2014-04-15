@@ -161,6 +161,12 @@ input[type=submit]:hover, input[type=submit]:focus, button:hover, button:focus {
     };
 }
 
+.nome, .email {
+    font-size:0.857em !important;
+    width:35% !important;
+    margin-top:20px;
+}
+
 @media (max-width: 783px) {
     .ask input[type=text] {
         width: 96%;
@@ -178,7 +184,10 @@ input[type=submit]:hover, input[type=submit]:focus, button:hover, button:focus {
     .ask {
         text-align: center;
         margin-top: 40px;
-    };
+    }
+    .nome, .email {
+        width:97% !important;
+    }
 }
 
 .areanotes {
@@ -190,4 +199,15 @@ input[type=submit]:hover, input[type=submit]:focus, button:hover, button:focus {
     width: 80%;
     font-size: 1em;
     height: 180px;
+}
+.alert {
+    background:none repeat scroll 0% 0% #C1423D;
+    width:100%;
+    padding:20px 0;
+    text-align:center;
+    margin-top:20px;
+    text-shadow:0px 1px 0px rgba(0, 0, 0, 0.1);
+    color:#fff;
+    font-size:1.5em;
+    font-family:'Open Sans Light',sans-serif;
 }
