@@ -15,7 +15,26 @@ if (isset($_GET['pergunta']) && isset($_GET['nome']) && isset($_GET['email']) &&
     		'Reply-To: '.$_GET['email']. "\r\n" .
     		'X-Mailer: PHP/' . phpversion();
 		mail($mailpara, $mailassunto, $mailmensagem, $mailheaders);
-		$saidasubmit = true;
+	} else if($_GET['acao'] == "envia" && SENDMETHOD == "pushover") {
+		$PUSHOVERTITLE = "Pergunta de ".$_GET['nome'];
+		$PUSHOVERTOKEN = PUSHOVERTOKEN;
+		$PUSHOVERUSER = PUSHOVERUSER;
+		$PUSHOVERMESSAGE = $_GET['pergunta'];
+		$PUSHOVERURL = "mailto:".$_GET['email'];
+		curl_setopt_array($ch = curl_init(), array(
+  			CURLOPT_URL => "https://api.pushover.net/1/messages.json",
+  			CURLOPT_POSTFIELDS => array(
+    			"token" => $PUSHOVERTOKEN,
+    			"user" => $PUSHOVERUSER,
+    			"message" => $PUSHOVERMESSAGE,
+    			"title" => $PUSHOVERTITLE,
+    			"url" => $PUSHOVERURL,
+    			"url_title" => $_GET['email'],
+    			"priority" => 0
+  			),
+  			CURLOPT_RETURNTRANSFER => true,));
+		curl_exec($ch);
+		curl_close($ch);
 	}
 }
 
