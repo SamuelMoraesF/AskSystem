@@ -27,7 +27,7 @@ define('SENDMETHOD','sqlite'); //Método de envio da pergunta, as opções podem
 
 	//SE SENDMETHOD FOR SQLITE - ISTO HABILITA O PAINEL DE GERENCIAMENTO
 
-	define('SQLITEDB','perguntas.db');
+	define('SQLITEDB','perguntas.db'); //Banco de dados SQLite
 
 	define('TIMEZONE','America/Sao_Paulo'); //Timezone http://www.php.net/manual/pt_BR/timezones.php
 
@@ -39,7 +39,7 @@ define('SENDMETHOD','sqlite'); //Método de envio da pergunta, as opções podem
 		define('PUSHOVERTOKENNOTIFY','aNyt8hP7fsJ4dQMUofrxSx9QKeiKdx'); //Seu token do Pushover
 
 
-	define('ENABLEEMAILNOTIFY', true);
+	define('ENABLEEMAILNOTIFY', true); //Habilita o envio de perguntas através de emails para o palestrante 
 
 		define('MAILNOTIFY','samuelmoraesf@gmail.com'); //Email a receber a mensagem
 
