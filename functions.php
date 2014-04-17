@@ -4,23 +4,23 @@
 include 'config.php';
 
 //Verifica se foi submetida alguma pergunta
-if (isset($_GET['pergunta']) && isset($_GET['nome']) && isset($_GET['email']) && isset($_GET['acao']) ){
+if (isset($_POST['pergunta']) && isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['acao']) ){
 
 	//verifica se a pergunta deve ser enviada por email
-	if($_GET['acao'] == "envia" && SENDMETHOD == "email"){
+	if($_POST['acao'] == "envia" && SENDMETHOD == "email"){
 		$mailpara = SENDMETHODMAIL;
-		$mailassunto = 'Pergunta de '.$_GET['nome'].' - '.NOMEEVENTO;
-		$mailmensagem = $_GET['nome'].'('.$_GET['email'].') enviou uma pergunta: "'.$_GET['pergunta'].'"';
+		$mailassunto = 'Pergunta de '.$_POST['nome'].' - '.NOMEEVENTO;
+		$mailmensagem = $_POST['nome'].'('.$_POST['email'].') enviou uma pergunta: "'.$_POST['pergunta'].'"';
 		$mailheaders = 'From: '.SENDMETHODFROM. "\r\n" .
-    		'Reply-To: '.$_GET['email']. "\r\n" .
+    		'Reply-To: '.$_POST['email']. "\r\n" .
     		'X-Mailer: PHP/' . phpversion();
 		mail($mailpara, $mailassunto, $mailmensagem, $mailheaders);
-	} else if($_GET['acao'] == "envia" && SENDMETHOD == "pushover") {
-		$PUSHOVERTITLE = "Pergunta de ".$_GET['nome'];
+	} else if($_POST['acao'] == "envia" && SENDMETHOD == "pushover") {
+		$PUSHOVERTITLE = "Pergunta de ".$_POST['nome'];
 		$PUSHOVERTOKEN = PUSHOVERTOKEN;
 		$PUSHOVERUSER = PUSHOVERUSER;
-		$PUSHOVERMESSAGE = $_GET['pergunta'];
-		$PUSHOVERURL = "mailto:".$_GET['email'];
+		$PUSHOVERMESSAGE = $_POST['pergunta'];
+		$PUSHOVERURL = "mailto:".$_POST['email'];
 		curl_setopt_array($ch = curl_init(), array(
   			CURLOPT_URL => "https://api.pushover.net/1/messages.json",
   			CURLOPT_POSTFIELDS => array(
@@ -29,28 +29,28 @@ if (isset($_GET['pergunta']) && isset($_GET['nome']) && isset($_GET['email']) &&
     			"message" => $PUSHOVERMESSAGE,
     			"title" => $PUSHOVERTITLE,
     			"url" => $PUSHOVERURL,
-    			"url_title" => $_GET['email'],
+    			"url_title" => $_POST['email'],
     			"priority" => 0
   			),
   			CURLOPT_RETURNTRANSFER => true,));
 		curl_exec($ch);
 		curl_close($ch);
-	} else if($_GET['acao'] == "envia" && SENDMETHOD == "sqlite") {
+	} else if($_POST['acao'] == "envia" && SENDMETHOD == "sqlite") {
 		date_default_timezone_set(TIMEZONE);
 		$SQLITEDATE = date('G:i:s');
 		$dbsqlite = new SQLite3(SQLITEDB);
-		$dbsqlite->exec('INSERT INTO perguntas (id, hora, pergunta, nome, email) VALUES (NULL,"'.$SQLITEDATE.'","'.$_GET['pergunta'].'","'.$_GET['nome'].'","'.$_GET['email'].'")');
+		$dbsqlite->exec('INSERT INTO perguntas (id, hora, pergunta, nome, email) VALUES (NULL,"'.$SQLITEDATE.'","'.$_POST['pergunta'].'","'.$_POST['nome'].'","'.$_POST['email'].'")');
 	}
 }
 
 function askalert(){
-	if (isset($_GET['pergunta']) && isset($_GET['nome']) && isset($_GET['email']) && isset($_GET['acao'])){
-		if ($_GET['acao'] == "envia") {
+	if (isset($_POST['pergunta']) && isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['acao'])){
+		if ($_POST['acao'] == "envia") {
 			echo '<section class="alert">Sua pergunta foi enviada com sucesso, aguarde que já vamos responder</section>';
 		}
 	}
-	else if(isset($_GET['acao'])) {
-		if($_GET['acao'] == "envia") {
+	else if(isset($_POST['acao'])) {
+		if($_POST['acao'] == "envia") {
 			echo '<section class="alert">Por favor, complete todos os campos para poder efetuar sua pergunta</section>';
 		}
 	}

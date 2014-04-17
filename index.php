@@ -21,7 +21,7 @@
         <h1 class="lectitle">Nome da Palestra</h1><h2 class="bytitle">por <?php echo PALESTRANTE ?></h2>
       </header>
       <?php askalert() ?>
-      <form class="ask" method="get" action="<?php echo FULLURL ?>">
+      <form class="ask" method="post" action="<?php echo FULLURL ?>/">
         <input type="text" name="pergunta" placeholder="Faça uma pergunta" class="pergunta" required>
         <input type="submit" value="Perguntar">
         <input type="text" name="nome" placeholder="Seu Nome" class="nome" required>
