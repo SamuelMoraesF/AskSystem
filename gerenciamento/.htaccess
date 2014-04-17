@@ -1,0 +1,4 @@
+AuthName "Acesso ao sistema de perguntas"
+AuthType Basic
+AuthUserFile /var/www/html/AskSystem/gerenciamento/.666
+require valid-user
