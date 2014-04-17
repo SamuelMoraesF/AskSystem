@@ -6,7 +6,7 @@ define('FULLURL','http://localhost/AskSystem'); //Endereço completo da raiz do 
 
 define('PALESTRANTE','Fulano de Tal'); //Nome do palestrante
 
-define('SENDMETHOD','pushover'); //Método de envio da pergunta, as opções podem ser 'email', 'pushover'
+define('SENDMETHOD','sqlite'); //Método de envio da pergunta, as opções podem ser 'email', 'pushover'
 
 
 	// SE SENDMETHOD FOR EMAIL
@@ -21,6 +21,15 @@ define('SENDMETHOD','pushover'); //Método de envio da pergunta, as opções pod
 
 	define('PUSHOVERUSER','uLubKkACvqvM2nY38xd4SpBfQ3XEma');
 
-	define('PUSHOVERTOKEN','aNyt8hP7fsJ4dQMUofrxSx9QKeiKdx')
+	define('PUSHOVERTOKEN','aNyt8hP7fsJ4dQMUofrxSx9QKeiKdx');
+
+
+
+	//SE SENDMETHOD FOR SQLITE
+
+	define('SQLITEDB','perguntas.db');
+
+	define('TIMEZONE','America/Sao_Paulo')
+
 
 ?>

@@ -35,6 +35,11 @@ if (isset($_GET['pergunta']) && isset($_GET['nome']) && isset($_GET['email']) &&
   			CURLOPT_RETURNTRANSFER => true,));
 		curl_exec($ch);
 		curl_close($ch);
+	} else if($_GET['acao'] == "envia" && SENDMETHOD == "sqlite") {
+		date_default_timezone_set(TIMEZONE);
+		$SQLITEDATE = date('G:i:s');
+		$dbsqlite = new SQLite3(SQLITEDB);
+		$dbsqlite->exec('INSERT INTO perguntas (id, hora, pergunta, nome, email) VALUES (NULL,"'.$SQLITEDATE.'","'.$_GET['pergunta'].'","'.$_GET['nome'].'","'.$_GET['email'].'")');
 	}
 }
 
