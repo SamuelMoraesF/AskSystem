@@ -18,7 +18,7 @@
     <a href="/en-US/" id="tabzilla" data-infobar="translation">Mozilla</a>
     <div class="content">
       <header class="header">
-        <h1 class="lectitle">Nome da Palestra</h1><h2 class="bytitle">por <?php echo PALESTRANTE ?></h2>
+        <h1 class="lectitle"><?php echo NOMEEVENTO ?></h1><h2 class="bytitle">por <?php echo PALESTRANTE ?></h2>
       </header>
       <?php askalert() ?>
       <form class="ask" method="post" action="<?php echo FULLURL ?>/">
