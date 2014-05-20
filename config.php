@@ -47,4 +47,8 @@ define('SENDMETHOD','sqlite'); //Método de envio da pergunta, as opções podem
 
 $shownotas = true;
 
+$notas = "Linha1
+Linha 2
+[1]http://example.org";
+
 ?>
