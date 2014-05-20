@@ -1,10 +1,10 @@
 <?php
 
-define('NOMEEVENTO', 'Nome do evento'); //Nome da palestra/evento a ser exibido no titulo da página
+define('NOMEEVENTO', 'II Fórum Tchelinux de SM'); //Nome da palestra/evento a ser exibido no titulo da página
 
 define('FULLURL','http://localhost/AskSystem'); //Endereço completo da raiz do sistema de perguntas sem / no final
 
-define('PALESTRANTE','Fulano de Tal'); //Nome do palestrante
+define('PALESTRANTE','Fulano de Tales'); //Nome do palestrante
 
 define('SENDMETHOD','sqlite'); //Método de envio da pergunta, as opções podem ser 'email', 'pushover' ou 'sqlite'
 
@@ -45,6 +45,10 @@ define('SENDMETHOD','sqlite'); //Método de envio da pergunta, as opções podem
 
 		define('FROMNOTIFY','asksystem@samuelmoraesf.tk'); //Email a enviar a mensagem
 
+$shownotas = true;
 
+$notas = "Aqui vai umas notas interessantes que podem ser úteis para enrolar os visitantes quando tem tempo de sobra. Posso pedir para enviarem alguns dados para a NSA com um link para o http://google.com.
+          -> Item1
+          -> Item2"
 
 ?>

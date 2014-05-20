@@ -21,6 +21,7 @@
         <h1 class="lectitle"><?php echo NOMEEVENTO ?></h1><h2 class="bytitle">por <?php echo PALESTRANTE ?></h2>
       </header>
       <?php askalert() ?>
+      <?php if($shownotas == false){echo '<div style="padding:20px;"></div>';} ?>
       <form class="ask" method="post" action="<?php echo FULLURL ?>/">
         <input type="text" name="pergunta" placeholder="Faça uma pergunta" class="pergunta" required>
         <input type="submit" value="Perguntar">
@@ -28,11 +29,9 @@
         <input type="email" name="email" placeholder="Seu Email" class="email" required>
         <input type="hidden" name="acao" value="envia">
       </form>
-      <div class="areanotes">
-        <textarea class="notes" readonly noresize>Aqui vai umas notas interessantes que podem ser úteis para enrolar os visitantes quando tem tempo de sobra. Posso pedir para enviarem alguns dados para a NSA com um link para o http://google.com.
-          -> Item1
-          -> Item2</textarea>
-      </div>
+      <?php if($shownotas == true){echo '<div class="areanotes">
+        <textarea class="notes" readonly noresize>'.$notas.'</textarea>
+      </div>';} ?>
     </div>
     <script src="<?php echo FULLURL ?>/js/jquery.min.js"></script>
     <script src="<?php echo FULLURL ?>/js/form.js"></script>
