@@ -2,9 +2,11 @@
 
 define('NOMEEVENTO', 'Nome do Evento'); //Nome da palestra/evento a ser exibido no titulo da página
 
-define('FULLURL','http://localhost/AskSystem'); //Endereço completo da raiz do sistema de perguntas sem / no final
+define('FULLURL','http://localhost/asks/AskSystem'); //Endereço completo da raiz do sistema de perguntas sem / no final
 
 define('PALESTRANTE','Fulano de Tal'); //Nome do palestrante
+
+define('SHOWSLIDES', false); //Exibir ou não os slides
 
 define('SENDMETHOD','sqlite'); //Método de envio da pergunta, as opções podem ser 'email', 'pushover' ou 'sqlite'
 
@@ -44,11 +46,5 @@ define('SENDMETHOD','sqlite'); //Método de envio da pergunta, as opções podem
 		define('MAILNOTIFY','email@exemplo.com'); //Email a receber a mensagem
 
 		define('FROMNOTIFY','email@exemplo.com'); //Email a enviar a mensagem
-
-$shownotas = false;
-
-$notas = "Linha1
-Linha 2
-[1]http://example.org";
 
 ?>

@@ -29,9 +29,6 @@
         <input type="email" name="email" placeholder="Seu Email" class="email" required>
         <input type="hidden" name="acao" value="envia">
       </form>
-      <?php if($shownotas == true){echo '<div class="areanotes">
-        <textarea class="notes" readonly noresize>'.$notas.'</textarea>
-      </div>';} ?>
     </div>
     <script src="<?php echo FULLURL ?>/js/jquery.min.js"></script>
     <script src="<?php echo FULLURL ?>/js/form.js"></script>
