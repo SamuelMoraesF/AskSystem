@@ -9,7 +9,7 @@ Permite o envio das perguntas para o palestrante via Email ou através do [Pusho
 Instalando
 ==========
 
-- Edite o arquivo `config.php`.
+- Mova o arquivo `config.php.example` para `config.php` e edite-o
 - Edite o arquivo `gerenciamento/.htaccess` e aponte o caminho completo para o aquivo `gerenciamento/.666` na linha `AuthUserFile`.
 
 
