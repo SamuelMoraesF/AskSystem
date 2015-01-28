@@ -62,6 +62,12 @@
         .ask span {
             padding-right:5px;
         }
+        .alert {
+            position:fixed;
+            top:60px;
+            left:20px;
+            right:20px;
+        }
     </style>
 
     <!--[if lt IE 9]>
