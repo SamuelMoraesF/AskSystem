@@ -6,7 +6,9 @@ define('FULLURL','http://localhost/asks/AskSystem'); //Endereço completo da rai
 
 define('PALESTRANTE','Fulano de Tal'); //Nome do palestrante
 
-define('SHOWSLIDES', false); //Exibir ou não os slides
+define('SHOWSLIDES', true); //Exibir ou não os slides
+
+	define('SLIDESURL', 'http://localhost/talk');
 
 define('SENDMETHOD','sqlite'); //Método de envio da pergunta, as opções podem ser 'email', 'pushover' ou 'sqlite'
 
@@ -46,5 +48,8 @@ define('SENDMETHOD','sqlite'); //Método de envio da pergunta, as opções podem
 		define('MAILNOTIFY','email@exemplo.com'); //Email a receber a mensagem
 
 		define('FROMNOTIFY','email@exemplo.com'); //Email a enviar a mensagem
+
+// Não modifique isto
+$confloaded = true;
 
 ?>

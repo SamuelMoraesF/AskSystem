@@ -46,12 +46,38 @@ if (isset($_POST['pergunta']) && isset($_POST['nome']) && isset($_POST['email'])
 function askalert(){
 	if (isset($_POST['pergunta']) && isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['acao'])){
 		if ($_POST['acao'] == "envia") {
-			echo '<section class="alert">Sua pergunta foi enviada com sucesso, aguarde que já vamos responder</section>';
+
+			if (SHOWSLIDES == false) {
+
+				echo '<section class="alert">Sua pergunta foi enviada com sucesso, aguarde que já vamos responder</section>';
+
+			} else {
+
+				echo '<div class="alert alert-success alert-dismissible fade in" role="alert">
+      				  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+      				  Sua pergunta foi enviada com sucesso, aguarde que já vamos responder
+    				  </div>';
+
+			}
+
+
 		}
 	}
 	else if(isset($_POST['acao'])) {
 		if($_POST['acao'] == "envia") {
-			echo '<section class="alert">Por favor, complete todos os campos para poder efetuar sua pergunta</section>';
+
+			if (SHOWSLIDES == false) {
+
+				echo '<section class="alert">Por favor, complete todos os campos para poder efetuar sua pergunta</section>';
+
+			} else {
+
+				echo '<div class="alert alert-warning alert-dismissible fade in" role="alert">
+      				  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+      				  Por favor, complete todos os campos para poder efetuar sua pergunta
+    				  </div>';
+
+			}
 		}
 	}
 }

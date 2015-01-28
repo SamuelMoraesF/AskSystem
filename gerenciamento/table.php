@@ -1,4 +1,13 @@
-<?php include '../config.php' ?>
+<?php 
+
+	if (!isset($confloaded)){
+
+		include '../config.php';
+
+	}
+
+?>
+
 <?php if(SENDMETHOD == "sqlite") : ?>
 <?php
 
