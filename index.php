@@ -73,6 +73,8 @@
 
     <div class="ask"><a href="#" data-toggle="modal" data-target="#ask" class="btn btn-success"><span class="glyphicon glyphicon-question-sign"></span> Perguntar</a></div>
 
+    <?php askalert() ?>
+
     <iframe src="<?php echo SLIDESURL ?>" style="width:100%;height:100vh;border:0;"></iframe>
 
     <div class="modal fade" id="ask" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
